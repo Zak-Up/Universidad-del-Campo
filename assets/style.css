@@ -13,7 +13,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 nav{
@@ -100,10 +100,14 @@ nav img{
     transform: translateY(-.25rem);
 }
 
+nav .fa{
+    display: none;
+}
+
 /*  ---==== MEDIA QUERYS ====--- */
 @media(max-width:700px){
     .text-box h1 {
-        font-size: 20px
+        font-size: 25px
     }
 
     .nav-links ul li {
@@ -116,22 +120,33 @@ nav img{
         height: 100vh;
         width: 200px;
         top: 0;
-        right: 0;
+        right: -200px;
         text-align: left;
         z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
     }
 }
 
 /*                   ----===== SCROLL BAR =====-----                 */
 ::-webkit-scrollbar{
 	width: .6rem;
-	border-radius: .5rem;
 	background-color: gray;
 }
 
 ::-webkit-scrollbar-thumb{
 	background-color: rgb(255, 255, 255);
-	border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
